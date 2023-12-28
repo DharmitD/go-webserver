@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>{{.Title}}</h1>
+    </header>
+    <main>
+        <p>{{.Message}}</p>
+        <h2>Your Submissions:</h2>
+        {{range .Submissions}}
+            <div class="submission">
+                <p>Submission ID: {{.ID}}</p>
+                <p>Message: {{.Message}}</p>
+            </div>
+        {{end}}
+        <a href="/form">Go to Form Page</a> <!-- Add this line -->
+        <a href="/">Go to Home</a>
+        <a href="/logout">Logout</a>
+    </main>
+</body>
+</html>
